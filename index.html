@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learning English with Rifky</title>
+  <style>
+    body {
+      background-color: #fff7c2;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1 {
+      color: #d35400;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: auto;
+    }
+    .example {
+      background: #fef3c7;
+      padding: 10px;
+      margin: 10px 0;
+      border-left: 4px solid #f1c40f;
+    }
+    a.button {
+      display: inline-block;
+      background: #f39c12;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+    a.button:hover {
+      background: #e67e22;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Learning English with Rifky</h1>
+  <h2>Simple Present Tense (+)</h2>
+
+  <p><strong>What is Simple Present Tense?</strong></p>
+  <p>The simple present tense in English is used to describe habits, repeated actions, facts, and general truths.</p>
+
+  <p><strong>Formula:</strong> Subject + Verb 1 + Object + Adverb of Frequency</p>
+
+  <h3>Examples:</h3>
+  <div class="example">Example 1: I study English every day.</div>
+  <div class="example">Example 2: They go to school.</div>
+  <div class="example">Example 3: We drink water.</div>
+<h2>Quiz</h2>
+  <form id="quizForm">
+    <div class="question">
+      <p>1. They _____ Coca Cola every day.</p>
+      <label><input type="radio" name="q1" value="d" /> a. drinking</label><br>
+      <label><input type="radio" name="q1" value="b" /> b. drank</label><br>
+      <label><input type="radio" name="q1" value="c" /> c. drunk</label><br>
+      <label><input type="radio" name="q1" value="a" /> d. drink</label>
+    </div>
+
+    <div class="question">
+      <p>2. She always _____ to school on time.</p>
+      <label><input type="radio" name="q2" value="a" /> a. go</label><br>
+      <label><input type="radio" name="q2" value="b" /> b. going</label><br>
+      <label><input type="radio" name="q2" value="c" /> c. went</label><br>
+      <label><input type="radio" name="q2" value="d" /> d. goes</label>
+    </div>
+
+    <div class="question">
+      <p>3. My father _____ in a bank.</p>
+      <label><input type="radio" name="q3" value="a" /> a. work</label><br>
+      <label><input type="radio" name="q3" value="b" /> b. works</label><br>
+      <label><input type="radio" name="q3" value="c" /> c. working</label><br>
+      <label><input type="radio" name="q3" value="d" /> d. worked</label>
+    </div>
+
+    <div class="question">
+      <p>4. The cat _____ under the table.</p>
+      <label><input type="radio" name="q4" value="a" /> a. sleep</label><br>
+      <label><input type="radio" name="q4" value="b" /> b. sleeping</label><br>
+      <label><input type="radio" name="q4" value="c" /> c. sleeps</label><br>
+      <label><input type="radio" name="q4" value="d" /> d. slept</label>
+    </div>
+
+    <div class="question">
+      <p>5. We _____ English every Monday.</p>
+      <label><input type="radio" name="q5" value="a" /> a. study</label><br>
+      <label><input type="radio" name="q5" value="b" /> b. studies</label><br>
+      <label><input type="radio" name="q5" value="c" /> c. studying</label><br>
+      <label><input type="radio" name="q5" value="d" /> d. studied</label>
+    </div>
+
+    <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+  </form>
+
+  <div class="result" id="result"></div>
+</main>
+
+<script>
+  const correctAnswers = {
+    q1: "a", // drink
+    q2: "d", // goes
+    q3: "b", // works
+    q4: "c", // sleeps
+    q5: "a"  // study
+  };
+
+  function checkAnswers() {
+    let score = 0;
+    for (let key in correctAnswers) {
+      const selected = document.querySelector(`input[name="${key}"]:checked`);
+      if (selected && selected.value === correctAnswers[key]) {
+        score++;
+      }
+    }
+    document.getElementById("result").innerText = `Your Score: ${score} / 5`;
+  }
+</script>
+
+</body>
+</html>
+
+  <a class="button" href="negative.html">Next: Simple Present Tense (-)</a>
+</div>
+
+</body>
+</html>

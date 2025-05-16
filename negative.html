@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Present Tense (-)</title>
+  <style>
+    body {
+      background-color: #fff7c2;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1 {
+      color: #d35400;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: auto;
+    }
+    .example {
+      background: #fef3c7;
+      padding: 10px;
+      margin: 10px 0;
+      border-left: 4px solid #f1c40f;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    button, a.button {
+      background: #f39c12;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    a.button:hover, button:hover {
+      background: #e67e22;
+    }
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Simple Present Tense (-)</h1>
+  <p><strong>Formula:</strong> Subject + do/does not + Verb + Object + Adverb of Frequency</p>
+
+  <h3>Examples:</h3>
+  <div class="example">Example 1: My brother does not like vegetables.</div>
+  <div class="example">Example 2: They don't go to school by car.</div>
+  <div class="example">Example 3: She doesn't play the guitar.</div>
+
+  <h3>Quiz:</h3>
+  <form id="quizForm">
+    <div class="question">
+      <p>1. My brother ___ like vegetables.</p>
+      <label><input type="radio" name="q1" value="a" /> a. don't</label><br>
+      <label><input type="radio" name="q1" value="b" /> b. doesn't</label><br>
+      <label><input type="radio" name="q1" value="c" /> c. isn't</label><br>
+      <label><input type="radio" name="q1" value="d" /> d. hasn't</label>
+    </div>
+
+    <div class="question">
+      <p>2. They ___ go to school by car.</p>
+      <label><input type="radio" name="q2" value="a" /> a. doesn't</label><br>
+      <label><input type="radio" name="q2" value="b" /> b. didn't</label><br>
+      <label><input type="radio" name="q2" value="c" /> c. don't</label><br>
+      <label><input type="radio" name="q2" value="d" /> d. aren't</label>
+    </div>
+
+    <div class="question">
+      <p>3. She ___ play the guitar.</p>
+      <label><input type="radio" name="q3" value="a" /> a. don't</label><br>
+      <label><input type="radio" name="q3" value="b" /> b. didn't</label><br>
+      <label><input type="radio" name="q3" value="c" /> c. doesn't</label><br>
+      <label><input type="radio" name="q3" value="d" /> d. isn't</label>
+    </div>
+
+    <div class="question">
+      <p>4. I ___ eat meat. I am a vegetarian.</p>
+      <label><input type="radio" name="q4" value="a" /> a. doesn't</label><br>
+      <label><input type="radio" name="q4" value="b" /> b. am not</label><br>
+      <label><input type="radio" name="q4" value="c" /> c. don't</label><br>
+      <label><input type="radio" name="q4" value="d" /> d. didn't</label>
+    </div>
+
+    <div class="question">
+      <p>5. We ___ watch TV every night.</p>
+      <label><input type="radio" name="q5" value="a" /> a. doesn't</label><br>
+      <label><input type="radio" name="q5" value="b" /> b. don't</label><br>
+      <label><input type="radio" name="q5" value="c" /> c. aren't</label><br>
+      <label><input type="radio" name="q5" value="d" /> d. hasn't</label>
+    </div>
+
+    <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+    <div class="result" id="result"></div>
+  </form>
+
+  <br><a class="button" href="index.html">⬅ Back to Main Page</a>
+</div>
+
+<script>
+  const correctAnswers = {
+    q1: "b",
+    q2: "c",
+    q3: "c",
+    q4: "c",
+    q5: "b"
+  };
+
+  function checkAnswers() {
+    let score = 0;
+    for (let key in correctAnswers) {
+      const selected = document.querySelector(`input[name="${key}"]:checked`);
+      if (selected && selected.value === correctAnswers[key]) {
+        score++;
+      }
+    }
+    document.getElementById("result").innerText = `Your Score: ${score} / 5`;
+  }
+</script>
+
+</body>
+</html>
